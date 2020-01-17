@@ -184,7 +184,7 @@ class InsCrawler(Logging):
 
             next_key = ele_a_datetime.get_attribute("href")
             if cur_key == next_key:
-                raise RetryException()
+                return
 
         browser = self.browser
         browser.implicitly_wait(1)
